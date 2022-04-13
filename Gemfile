@@ -63,6 +63,8 @@ gem "uglifier", ">= 1.3.0"
 gem "whenever", "~> 0.9"
 gem "wisper", "~> 2.0"
 gem "wisper-activerecord", "~> 1.0"
+gem 'ed25519', '>= 1.2', '< 2.0'
+gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 
 group :development, :test do
   gem "awesome_print", "~> 1.6"

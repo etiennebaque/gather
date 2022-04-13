@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-set :deploy_to, "/home/deploy/gather"
-role :app, %w[deploy@134.122.120.173]
-role :web, %w[deploy@134.122.120.173]
-role :db,  %w[deploy@134.122.120.173]
-set :branch, "master"
+set :deploy_to, "/home/etienne/gather"
+role :app, %w[etienne@159.203.1.5]
+role :web, %w[etienne@159.203.1.5]
+role :db,  %w[etienne@159.203.1.5]
+set :branch, "develop"
 set :rails_env, "production"
-set :linked_files, fetch(:linked_files, []).push(".rbenv-vars")
+set :linked_files, fetch(:linked_files, []).push(".rbenv-vars", "config/settings.local.yml")

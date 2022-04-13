@@ -50,11 +50,12 @@ module ApplicationControllable::RequestPreprocessing
   # Redirects to the apex domain. Requested at the controller level if the apex domain is required.
   # Not run on every request.
   def ensure_apex_domain
-    return if subdomain.blank?
-    url_builder = Settings.url.protocol == "https" ? URI::HTTPS : URI::HTTP
-    url_params = Settings.url.to_h
-    url_params[:path], url_params[:query] = request.fullpath.split("?")
-    redirect_to(url_builder.build(url_params).to_s)
+    return
+    # return if subdomain.blank?
+    # url_builder = Settings.url.protocol == "https" ? URI::HTTPS : URI::HTTP
+    # url_params = Settings.url.to_h
+    # url_params[:path], url_params[:query] = request.fullpath.split("?")
+    # redirect_to(url_builder.build(url_params).to_s)
   end
 
   def log_full_url
